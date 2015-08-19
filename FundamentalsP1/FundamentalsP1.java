@@ -13,10 +13,17 @@ public class FundamentalsP1{
       System.out.print("Favorite movie:");
       movie = scanner1.nextLine();
       
+<<<<<<< HEAD
       System.out.println("Your favorite color is " + color); 
       System.out.println("Your favorite food is " + food);
       System.out.println("Your favorite musical group is " + group);
       System.out.println("Your favorite movie is " + movie);
+=======
+      System.out.println("Favorite color is: " + color);
+      System.out.println("Favorite food is: " + food);
+      System.out.println("Favorite group is: " + group);
+      System.out.println("Favorite movie is: " + movie);
+>>>>>>> origin/master
     }
 }
        
