@@ -1,33 +1,38 @@
-
-/**
- * Write a description of class FundamentalsP5 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class FundamentalsP5
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class FundamentalsP5
-     */
-    public FundamentalsP5()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+import java.util.Scanner;
+public class FundamentalsP5 {
+    public static void main(String args [])
+    { 
+        String m1, m2, m3, s1, s2, s3;
+        Scanner scanner1 = new Scanner (System.in);
+        
+        System.out.print("Favorite movie #1:");
+        m1 = scanner1.nextLine();
+        
+        System.out.print("Favorite movie #2:");
+        m2 = scanner1.nextLine();
+        
+        System.out.print("Favorite movie #3:");
+        m3 = scanner1.nextLine();
+        
+        System.out.print("Favorite song #1:");
+        s1 = scanner1.nextLine();
+        
+        System.out.print("Favorite song #2:");
+        s2 = scanner1.nextLine();
+        
+        System.out.print("Favorite song #3:");
+        s3 = scanner1.nextLine();
+      
+        String[] movies = {m1,m2,m3};
+        String[] songs = {s1,s2,s3};
+        
+        for (String element: movies)
+        { System.out.println( element);
+        }
+        int i = 0;
+        while ( i < songs.length)
+        { System.out.print( songs[i] + ", ");
+            i += 1;
+        }
     }
 }
