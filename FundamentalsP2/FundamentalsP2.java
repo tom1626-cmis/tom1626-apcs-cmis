@@ -13,14 +13,14 @@ public class FundamentalsP2
         
         if(a>b)
         { System.out.println("The value of a is " + a + " and it is more than the value of b whose is " + b + ".");
-        }
+        }//end of if more
         
-        if(a<b)
+        else if(a<b)
         { System.out.println("The value of a is " + a + " and it is less than the value of b whose is " + b + ".");
-        }
+        }// end of if less
         else
         {System.out.println("The value of a is " + a + " and it is equal to the value of b whose is also " + b + ".");
-        }
-    }
-}
+        }// if equals
+    }// end of method
+}//end of classs
 

@@ -16,12 +16,12 @@ public class FundamentalsP6{
             int random = (int)(Math.random() * 100);
             array[index]=random;
             index +=1;
-        }
+        } //adding random int
         
         for( int i =0; i < array.length ;i++)
         {
             System.out.print(array[i] + " "); 
             
-        }
-    }
-}
+        } // printing array
+    } // end of class
+} // end of method

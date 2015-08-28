@@ -11,9 +11,9 @@ public class FundamentalsP3
        num = scanner1.nextInt();
        if (num % 2==1){
       System.out.print("This number is odd.");
-    }
+    }// if odd
      if (num % 2 ==0){
       System.out.print("This number is even.");
-    }
-    }
-}
+    } // if even
+    } // end of method
+} // end of class
