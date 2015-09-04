@@ -4,11 +4,11 @@ public class TestOne
 {
     public static void main(String args[])
     {
-        String input = JOptionPane.showInputDialog("Type in an integer: ");
+        String input = JOptionPane.showInputDialog("Type in an integer: "); //input
         int number = Integer.parseInt(input);
         String[] index = new String[number];
         double[] random = new double[number];
-        String[] letter = new String[number];
+        String[] letter = new String[number]; // 3 seperate arrays
         for (int x = 0; x< number; x++)
         {
             index[x] = x + ":";
@@ -30,15 +30,15 @@ public class TestOne
                 for(int y = 0; y< (int)random[x]; y++)
                 {
                     letter[x] += "E";
-                }
-            }
+                }// add letters
+            } // end of even
                         if ( (int)random[x] %2 == 1)
             {
                 for(int y = 0; y< (int)random[x]; y++)
                 {
                     letter[x] += "O";
-                }
-            }
+                } // add letters
+            } // end of odd
         } // letters
         int z = number-1;
         while(z >=0)
