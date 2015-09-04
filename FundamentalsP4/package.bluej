@@ -1,10 +1,10 @@
 #BlueJ package file
 objectbench.height=76
 objectbench.width=686
-package.editor.height=400
+package.editor.height=435
 package.editor.width=588
-package.editor.x=658
-package.editor.y=246
+package.editor.x=629
+package.editor.y=112
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -12,8 +12,8 @@ package.showUses=true
 project.charset=UTF-8
 target1.editor.height=704
 target1.editor.width=900
-target1.editor.x=246
-target1.editor.y=23
+target1.editor.x=85
+target1.editor.y=17
 target1.height=50
 target1.name=FundamentalsP4
 target1.naviview.expanded=true
