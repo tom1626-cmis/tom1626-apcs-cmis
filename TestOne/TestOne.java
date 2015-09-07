@@ -24,7 +24,7 @@ public class TestOne
         } // print first half
                 for ( int x = 0 ; x< number; x++)
         {
-            letter[x] = "";
+            letter[x] = ""; // blank string
             if ( (int)random[x] %2 == 0)
             {
                 for(int y = 0; y< (int)random[x]; y++)
