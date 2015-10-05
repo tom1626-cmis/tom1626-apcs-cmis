@@ -80,7 +80,7 @@ public class WeatherChaos
             double avg = (double)sum/(double)day;
             int swing = 0 ;
             int swingD1 = 0;
-            int swingD2 = 0;
+            int swingD2 = 1;
             for(int i = 1 ; i < day ; i++)
             {
                 if ( Math.abs(temp[i] - temp[i-1]) > swing)
@@ -91,7 +91,7 @@ public class WeatherChaos
                 }
             }
             //gained avg, min, max , b_swing
-            
+
             System.out.println("Min temperature: " + min + " degrees on Day " + minDay );
             System.out.println("Max temperature: " + max + " degrees on Day " + maxDay );
             System.out.println("Average temperature: " + avg + " degrees");
