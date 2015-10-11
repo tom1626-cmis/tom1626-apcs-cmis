@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 public class StudentDriver
 {
     public static void main(String args[])
@@ -19,7 +20,8 @@ public class StudentDriver
         
         Student junior001 = new Student(FN,LN,age,boy);
         System.out.println("------------------");
-        System.out.println(senior001);
-        System.out.println(junior001);
+        JOptionPane.showMessageDialog(null ,  senior001);
+        JOptionPane.showMessageDialog(null , junior001);
+
     }
 }

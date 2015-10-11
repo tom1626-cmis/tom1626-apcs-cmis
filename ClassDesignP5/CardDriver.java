@@ -9,7 +9,7 @@ public class CardDriver
         double finalnumber = (double)(NumberX)/Math.pow(10,places);
         return finalnumber;
     }
-    /// rounding function thingy (don't know what it's called)
+    /// rounding method
     public static void main(String args[])
     {
         Scanner input = new Scanner(System.in);
@@ -20,7 +20,6 @@ public class CardDriver
         String[] PossibleCards = { "A", "2", "3", "4", "5", "6","7", "8", "9", "10", "J", "Q", "K"};
         String[] PossibleSuits = { "♠", "♥", "♦" ,"♣"};
         int[] worth = { 1,2,3,4,5,6,7,8,9,10,10,10,10}; 
-        Card[] possibleSoft = {new Card("A","♠"),new Card("A", "♥"),new Card("A", "♦") , new Card("A","♣")};
         // suits + score;
         Card[][] totalPlayerCard = new Card[NumberOfPlayers][];
         int[] scorePlayers = new int[NumberOfPlayers];

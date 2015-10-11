@@ -28,7 +28,7 @@ public class Student
             info = "Name :" + Fname + " " + Lname + "\n"
                 + "Age :" + age + "\n"
                 + "Gender: Male" + "\n"
-                + "--------------";     
+                  ;
         }
         else
         {
