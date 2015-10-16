@@ -1,5 +1,6 @@
 public class Planet
 {
+    // initialized variables
     private int Population;
     private double percentSpaceMarines;
     private double SpaceMarinesPerStarDestroyer;
@@ -8,7 +9,7 @@ public class Planet
     private String name;
     String[] PossibleNames = {"Alpha","Beta","Gamma","Delta"};
     String[] PossibleRelation = {"at war", "hostile", "friendly","neutral"};
-    Planet()
+    Planet() // zero arguement
     { 
         name = PossibleNames[(int)(Math.random()*4)] + " " +
         String.format("%.2f",Math.random());
@@ -17,8 +18,8 @@ public class Planet
         Radius = 1;
         relationship = PossibleRelation[(int)(Math.random()*4)];
         SpaceMarinesPerStarDestroyer = 1;
-    }
-    Planet( int maxPopulation, double percentSpaceMarines,double maxSpaceMarinesPerStarDestroyer )
+    } // zero argument
+    Planet( int maxPopulation, double percentSpaceMarines,double maxSpaceMarinesPerStarDestroyer ) // three argument
     {
         name = PossibleNames[(int)(Math.random()*4)] + " " +
         String.format("%.2f",Math.random());
@@ -27,7 +28,7 @@ public class Planet
         Radius = Math.random();
         relationship = PossibleRelation[1];
         SpaceMarinesPerStarDestroyer = maxSpaceMarinesPerStarDestroyer * Math.random();
-    }
+    } // end of three argument
     public String toString()
     {
         String output = 
@@ -41,5 +42,5 @@ public class Planet
         "Space Marines per Star Destroyer: " + String.format("%.2f",SpaceMarinesPerStarDestroyer) + "\n" ;
         return output;
         
-    }
+    } // end of toString()
 }// end class
