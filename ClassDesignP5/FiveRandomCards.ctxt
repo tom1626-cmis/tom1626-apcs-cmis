@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=Array\ Element
+comment0.target=Card[]\ CardAddToArray(Card[],\ Card)
+comment1.params=Array\ Element
+comment1.target=int[]\ IntAddToArray(int[],\ int)
+comment2.params=number\ array
+comment2.target=boolean\ isIn(int,\ int[])
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

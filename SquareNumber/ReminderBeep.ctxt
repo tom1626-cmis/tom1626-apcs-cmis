@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=seconds
+comment0.target=ReminderBeep(int)
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

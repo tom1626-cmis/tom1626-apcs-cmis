@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Card\ RandomCard()
+comment1.params=Hand
+comment1.target=Card[]\ Hit(Card[])
+comment2.params=Hand\ Score
+comment2.target=int\ Score(Card[],\ int)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

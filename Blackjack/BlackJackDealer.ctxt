@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=Score\ ScoreField\ CardsField\ ResultField
+comment0.target=void\ Dealer(int,\ javax.swing.JTextField,\ javax.swing.JTextField,\ javax.swing.JTextField)
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

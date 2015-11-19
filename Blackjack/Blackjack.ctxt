@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Card\ RandomCard()
+comment1.params=old
+comment1.target=Card[]\ NewCard(Card[])
+comment2.params=C
+comment2.target=int\ CheckScore(Card[])
+comment3.params=S
+comment3.target=boolean\ CheckBust(int)
+comment4.params=S
+comment4.target=boolean\ Blackjack(int)
+comment5.params=C
+comment5.target=Card[]\ Hit(Card[])
+comment6.params=
+comment6.target=boolean\ Game()
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8
