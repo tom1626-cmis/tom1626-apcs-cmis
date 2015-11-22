@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Timer;
 
 public class BlackJackDealer
 {
@@ -11,6 +12,7 @@ public class BlackJackDealer
         Score = BlackJackMoves.Score( Hand, Score );
         ScoreField.setText(String.valueOf(Score));
         String Result = "";
+        
         while ( Score < 17 )
         {
             Hand = BlackJackMoves.Hit(Hand);

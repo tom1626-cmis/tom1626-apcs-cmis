@@ -4,24 +4,12 @@ public class StudentDriver
 {
     public static void main(String args[])
     {
-        Scanner input = new Scanner(System.in);
-        Student senior001 = new Student();
-        System.out.println("First Name: ");
-        String FN = input.nextLine();
+        Student Senior = new Student("Joe", "Senior", 18, true, 4.0,4.0,3.5,4.0,4.0);
+        System.out.println(Senior);
         
-        System.out.println("Last Name: ");
-        String LN = input.nextLine();
+        Senior.setGPA("Science", 4.0);
         
-        System.out.println("Age:");
-        int age = input.nextInt();
-        
-        System.out.println("Boy?");
-        boolean boy = input.nextBoolean();
-        
-        Student junior001 = new Student(FN,LN,age,boy);
-        System.out.println("------------------");
-        JOptionPane.showMessageDialog(null ,  senior001);
-        JOptionPane.showMessageDialog(null , junior001);
+        System.out.println(Senior);
 
     }
 }
