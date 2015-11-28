@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 public class BlackJackMoves
 {
     public static Card RandomCard()
@@ -43,15 +44,23 @@ public class BlackJackMoves
         }
         return Score;
     }
-    public static void main (String args[])
+
+    public static void ScoreP( ArrayList<Card> Hand, int Score)
     {
-        Card[] Card = {BlackJackMoves.RandomCard(),BlackJackMoves.RandomCard(),BlackJackMoves.RandomCard()};
-        int Score = 0;
-         Score = Score( Card,Score);
-        for(int i = 0; i < Card.length; i++)
+        Score = 35;
+        for(int i = 0; i < Hand.size(); i++)
         {
-            System.out.print(Card[i]);
+            Score+= (Hand.get(i)).value; 
+            if (Hand.get(i).value == 1 && Score <= 11)
+            {
+                Score +=10;
+            }  
         }
-        System.out.println(Score);
+    }
+
+    public static void HitP( ArrayList<Card> Hand,JTextField Text)
+    {
+        Hand.add(RandomCard());
+        DisplayMethods.ShowCardP( Text, Hand);
     }
 }

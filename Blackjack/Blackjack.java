@@ -15,7 +15,6 @@ public class Blackjack
         Card Card = new Card(PossibleCards[RandomNumber],PossibleSuits[RandomNumberS],value);
         return Card;
     }
-
     private static Card[] NewCard(Card[] old)
     {
         Card[] NewArray = new Card[old.length +1];
@@ -26,7 +25,6 @@ public class Blackjack
         NewArray[old.length] = RandomCard();   
         return NewArray;
     }
-
     private static int CheckScore(Card[] C)
     {
         int score = 0;

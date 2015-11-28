@@ -27,7 +27,7 @@ public class BlackJackAI
             Score = BlackJackMoves.Score(Hand, Score);
             ScoreField.setText(String.valueOf(Score));
         }
-        double chanceOfBet = (19-Score/6);
+        double chanceOfBet = ((19-Score)/6);
 
         while ( chanceOfBet > Math.random())
         {
@@ -35,7 +35,7 @@ public class BlackJackAI
             DisplayMethods.ShowCard(CardsField, Hand);
             Score = BlackJackMoves.Score(Hand, Score);
             ScoreField.setText(String.valueOf(Score));
-            chanceOfBet = (19-Score/6);
+            chanceOfBet = ((19-Score)/6);
         }
 
         if (Score == 21 && Hand.length == 2)

@@ -1,5 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
+import java.util.ArrayList;
 public class DisplayMethods
 {
     public static void ShowCard( JTextField Text, Card[] Hand ) // WORKING!!
@@ -21,6 +22,14 @@ public class DisplayMethods
         ResultField.setText(Result);
         ScoreField.setText(String.valueOf(Score));
     }
-
+    public static void ShowCardP ( JTextField Text, ArrayList Cards)
+    {
+        String Result = "";
+        for(int i = 0; i < Cards.size(); i ++)
+        {
+            Result+= Cards.get(i) + "   ";
+        }
+        Text.setText(Result);
+    }
 }
 //////////////////////////// ALL WORKING !!!! /////////////////////////////////
