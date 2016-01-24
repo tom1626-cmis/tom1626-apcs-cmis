@@ -39,7 +39,6 @@ public class BlackJackDriver
         TextP.add(CardFieldP);
         TextP.add(ResultFieldP);
 
-        ArrayList<Card> Cards = new ArrayList<Card>();
 
         Play.addActionListener(new ActionListener()
             {

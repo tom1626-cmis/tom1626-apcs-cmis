@@ -8,14 +8,7 @@ public class BlackJackPlayer
     public static void Play(JButton Hit, JButton Stand, JTextField ScoreField, JTextField ResultField, 
     JTextField CardsField, JButton Play)
     {
-
         ArrayList<Card> Cards = new ArrayList<Card>(); 
-        Cards.add(BlackJackMoves.RandomCard());
-        Cards.add(BlackJackMoves.RandomCard());
-        ResultField.setText("");
-        Hit.setEnabled(true);
-        Stand.setEnabled(true);
-
         Stand.addActionListener(new ActionListener()
             {
                 public void actionPerformed(ActionEvent e)
@@ -23,34 +16,11 @@ public class BlackJackPlayer
                     Hit.setEnabled(false);
                     Stand.setEnabled(false);
                     Play.setEnabled(true);
+                    
                     Cards.clear();
                     return;
                 }
             });
-        int Score = 0;
-
-        DisplayMethods.ShowCardP(CardsField, Cards);
-        for(int i = 0; i < Cards.size(); i++)
-        {
-            Score+= (Cards.get(i)).value; 
-            if (Cards.get(i).value == 1 && Score <= 11)
-            {
-                Score +=10;
-            }  
-        }
-
-        if (Score == 21)
-        {
-            ResultField.setText("BlackJack!");
-            Hit.setEnabled(false);
-            Stand.setEnabled(false);
-            Play.setEnabled(true);
-            Cards.clear();
-            return;
-        }
-
-        ScoreField.setText(String.valueOf(Score));
-
         Hit.addActionListener(new ActionListener()
             {
                 public void actionPerformed(ActionEvent e)
@@ -73,11 +43,51 @@ public class BlackJackPlayer
                         Hit.setEnabled(false);
                         Stand.setEnabled(false);
                         Play.setEnabled(true);
+                        
                         Cards.clear();
                         return;
                     }
+                    else if (ScoreX == 21)
+                    {
+                        Hit.setEnabled(false);
+                        Stand.setEnabled(false);
+                        Play.setEnabled(true);
+                    }
                 }
             });
+
+        
+        Cards.add(BlackJackMoves.RandomCard());
+        Cards.add(BlackJackMoves.RandomCard());
+
+        ResultField.setText("");
+        Hit.setEnabled(true);
+        Stand.setEnabled(true);
+
+        int Score = 0;
+
+        DisplayMethods.ShowCardP(CardsField, Cards);
+        for(int i = 0; i < Cards.size(); i++)
+        {
+            Score+= (Cards.get(i)).value; 
+            if (Cards.get(i).value == 1 && Score <= 11)
+            {
+                Score +=10;
+            }  
+        }
+
+        if (Score == 21)
+        {
+            ResultField.setText("BlackJack!");
+            Hit.setEnabled(false);
+            Stand.setEnabled(false);
+            Play.setEnabled(true);
+            
+            Cards.clear();return;
+        }
+
+        ScoreField.setText(String.valueOf(Score));
+
     }
 
     public static void main(String args[])

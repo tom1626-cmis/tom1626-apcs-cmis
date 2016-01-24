@@ -47,7 +47,7 @@ public class BlackJackMoves
 
     public static void ScoreP( ArrayList<Card> Hand, int Score)
     {
-        Score = 35;
+        Score = 0;
         for(int i = 0; i < Hand.size(); i++)
         {
             Score+= (Hand.get(i)).value; 
@@ -58,7 +58,7 @@ public class BlackJackMoves
         }
     }
 
-    public static void HitP( ArrayList<Card> Hand,JTextField Text)
+    public static void HitP(ArrayList<Card> Hand,JTextField Text)
     {
         Hand.add(RandomCard());
         DisplayMethods.ShowCardP( Text, Hand);
