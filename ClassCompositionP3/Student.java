@@ -1,7 +1,7 @@
 public class Student
 {
     private String Fname;
-    private String Lname;
+    public String Lname;
     private int age;
     private boolean Boy;
     private double[] grades = new double[5];
