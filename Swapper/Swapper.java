@@ -82,9 +82,9 @@ public class Swapper
             {
                 if(grid[row][col]==0)
                 {
-                    grid[row][col] =7;
+                    grid[row][col] = grid[rowindex][colindex];
                 }
-                else if(grid[row][col]==7)
+                else if(grid[row][col]==grid[rowindex][colindex])
                 {
                     grid[row][col] =0;
                 }

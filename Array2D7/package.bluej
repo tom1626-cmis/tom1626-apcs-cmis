@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=Game2
 dependency1.to=Game
 dependency1.type=UsesDependency
@@ -10,21 +11,40 @@ package.editor.x=216
 package.editor.y=110
 package.numDependencies=1
 package.numTargets=2
+=======
+objectbench.height=76
+objectbench.width=686
+package.editor.height=400
+package.editor.width=560
+package.editor.x=618
+package.editor.y=127
+package.numDependencies=0
+package.numTargets=1
+>>>>>>> origin/master
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
 target1.editor.height=700
 target1.editor.width=900
+<<<<<<< HEAD
 target1.editor.x=217
 target1.editor.y=8
 target1.height=50
 target1.name=Game
+=======
+target1.editor.x=658
+target1.editor.y=147
+target1.height=50
+target1.name=Game
+target1.naviview.expanded=true
+>>>>>>> origin/master
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=80
 target1.x=70
 target1.y=10
+<<<<<<< HEAD
 target2.editor.height=744
 target2.editor.width=1382
 target2.editor.x=-8
@@ -37,3 +57,5 @@ target2.typeParameters=
 target2.width=80
 target2.x=160
 target2.y=10
+=======
+>>>>>>> origin/master
