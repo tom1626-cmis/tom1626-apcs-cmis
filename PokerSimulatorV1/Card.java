@@ -28,6 +28,10 @@ public class Card
             value = Integer.parseInt(rank);
         }
     }
+    public static Card reverseToString(String X)
+    {
+        return new Card(X.substring(0,1),X.substring(1));
+    }
     public String toString()
     {
         String output = rank+suit;

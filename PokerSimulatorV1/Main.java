@@ -2,17 +2,48 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class Main extends JPanel implements ActionListener
+public class Main extends JPanel
 {
     JButton FrameOpener = new JButton("Open");
+    JTextField cardS = new JTextField(10);
+    CardSelector Open = new CardSelector();
+    boolean OpenF = true;
+    JButton Update = new JButton("Update");
+    Card OpenC = new Card("3","NWorking");
     public Main()
     {
-
-    }
-
-    public void actionPerformed(ActionEvent e) 
-    {
-            CardSelector.setVisible(true);
+        super(new BorderLayout());
+        FrameOpener.addActionListener(new ActionListener(){ 
+                public void actionPerformed(ActionEvent e)
+                {        
+                    if(OpenF)
+                    {
+                        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                                public void run() {
+                                    Open.createAndShowGUI();
+                                }
+                            });
+                        OpenF = false;
+                    }
+                    else
+                    {
+                         Open.MainFrame.setVisible(true);
+                    }
+                }
+            });
+        Update.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e)
+                {
+                    if(Open.SelectedCard != null)
+                    {
+                        OpenC = Open.SelectedCard;
+                    }
+                    cardS.setText(OpenC.toString());                    
+                }
+            });
+        add(FrameOpener,BorderLayout.CENTER);
+        add(cardS, BorderLayout.PAGE_END);
+        add(Update, BorderLayout.PAGE_START);
     }
 
     private static void createAndShowGUI() 
