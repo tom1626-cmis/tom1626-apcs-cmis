@@ -1,4 +1,4 @@
-public class Card
+public class Card implements java.io.Serializable
 {
     public String rank;
     public String suit;
@@ -31,6 +31,14 @@ public class Card
     public static Card reverseToString(String X)
     {
         return new Card(X.substring(0,1),X.substring(1));
+    }
+    public boolean checkSame(Card x)
+    {
+        if(rank.equals(x.rank) && suit.equals(x.suit))
+        {
+            return true;
+        }
+        return false;
     }
     public String toString()
     {

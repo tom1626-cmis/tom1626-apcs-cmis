@@ -36,7 +36,7 @@ public class Main extends JPanel
                 {
                     if(Open.SelectedCard != null)
                     {
-                        OpenC = Open.SelectedCard;
+                        Open.setCard(OpenC);
                     }
                     cardS.setText(OpenC.toString());                    
                 }

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=Deck
 comment0.target=Hand(Card[])
-comment1.params=test
-comment1.target=int[]\ Scoring(Card[])
+comment1.params=
+comment1.target=int[]\ Scoring()
 comment2.params=OtherHand
 comment2.target=boolean\ TestWin(Hand)
 numComments=3

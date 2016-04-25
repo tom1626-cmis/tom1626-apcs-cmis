@@ -1,4 +1,4 @@
-
+import java.io.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -33,7 +33,18 @@ public class CardSelector extends JPanel implements ActionListener
                 {        
                     MainFrame.setVisible(false);
 
-                    SelectedCard = null;
+                    try
+                    {
+                        FileOutputStream fileOut =
+                            new FileOutputStream("/tmp/card.ser");
+                        ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                        out.writeObject(e);
+                        out.close();
+                        fileOut.close();
+                    }catch(IOException i)
+                    {
+                        i.printStackTrace();
+                    }
                 }
             });
         Cancel.addActionListener(new ActionListener(){ 
@@ -69,6 +80,11 @@ public class CardSelector extends JPanel implements ActionListener
         MainFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         MainFrame.pack();
         MainFrame.setVisible(true);
+    }
+
+    public void setCard(Card place)
+    {
+        place = SelectedCard;
     }
 
     public static void main(String[] args) {
