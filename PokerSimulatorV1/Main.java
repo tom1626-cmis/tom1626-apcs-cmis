@@ -15,19 +15,14 @@ public class Main extends JPanel
         super(new BorderLayout());
         FrameOpener.addActionListener(new ActionListener(){ 
                 public void actionPerformed(ActionEvent e)
-                {        
+                {
                     if(OpenF)
                     {
-                        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-                                public void run() {
-                                    Open.createAndShowGUI();
-                                }
-                            });
-                        OpenF = false;
+                        Open.createAndShowGUI();
                     }
                     else
                     {
-                         Open.MainFrame.setVisible(true);
+                        Open.MainFrame.setVisible(true);
                     }
                 }
             });
@@ -37,6 +32,10 @@ public class Main extends JPanel
                     if(Open.SelectedCard != null)
                     {
                         Open.setCard(OpenC);
+                    }
+                    else
+                    {
+                        OpenC = new Card("1", "Random");
                     }
                     cardS.setText(OpenC.toString());                    
                 }

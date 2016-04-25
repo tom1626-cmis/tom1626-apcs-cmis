@@ -20,6 +20,7 @@ public class CardSelector extends JPanel implements ActionListener
     JPanel OkCancel = new JPanel(new GridLayout(1,2));
     public CardSelector()
     {
+        
         super(new BorderLayout());
         for (int i = 0; i < 52; i++)
         {
@@ -32,6 +33,7 @@ public class CardSelector extends JPanel implements ActionListener
                 public void actionPerformed(ActionEvent e)
                 {        
                     MainFrame.setVisible(false);
+<<<<<<< HEAD
 
                     try
                     {
@@ -44,6 +46,14 @@ public class CardSelector extends JPanel implements ActionListener
                     }catch(IOException i)
                     {
                         i.printStackTrace();
+=======
+                    for( int i = 0; i< 52; i++)
+                    {
+                        if(CardSelect[i].isSelected())
+                        {
+                            SelectedCard = Card.reverseToString(CardSelect[i].getText());
+                        }
+>>>>>>> origin/master
                     }
                 }
             });
@@ -51,6 +61,12 @@ public class CardSelector extends JPanel implements ActionListener
                 public void actionPerformed(ActionEvent e)
                 {        
                     MainFrame.setVisible(false);
+                    CardText.setText("");
+                    SelectedCard = null;
+                    for( JRadioButton x : CardSelect)
+                    {
+                        x.setSelected(false);                        
+                    }
                 }
             });
         OkCancel.add(Confirm);
