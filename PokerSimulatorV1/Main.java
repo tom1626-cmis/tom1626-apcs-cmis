@@ -1,4 +1,4 @@
-
+import java.io.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -7,7 +7,6 @@ public class Main extends JPanel
     JButton FrameOpener = new JButton("Open");
     JTextField cardS = new JTextField(10);
     CardSelector Open = new CardSelector();
-    boolean OpenF = true;
     JButton Update = new JButton("Update");
     Card OpenC = new Card("3","NWorking");
     public Main()
@@ -16,28 +15,19 @@ public class Main extends JPanel
         FrameOpener.addActionListener(new ActionListener(){ 
                 public void actionPerformed(ActionEvent e)
                 {
-                    if(OpenF)
-                    {
-                        Open.createAndShowGUI();
-                    }
-                    else
-                    {
-                        Open.MainFrame.setVisible(true);
-                    }
+                    Open.createAndShowGUI("Open");
                 }
             });
         Update.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e)
                 {
-                    if(Open.SelectedCard != null)
-                    {
-                        Open.setCard(OpenC);
+                    
+                    try{
+                        OpenC = (Card)SerializationUtil.deserialize("Open.ser");
                     }
-                    else
-                    {
-                        OpenC = new Card("1", "Random");
+                     catch (ClassNotFoundException | IOException a) {
+                        a.printStackTrace();
                     }
-                    cardS.setText(OpenC.toString());                    
                 }
             });
         add(FrameOpener,BorderLayout.CENTER);

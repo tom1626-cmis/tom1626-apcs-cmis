@@ -5,10 +5,10 @@ public class TestDeck
         Card[] RandomDeck = new Card[51];
         Deck Deck = new Deck();
         Card[] OC = {new Card("A","♠"),null,new Card("5","♥"),new Card("6","♠"),
-                new Card("8","♠"),new Card("7","♥"),null};  
+                new Card("8","♠"),new Card("10","♥"),null};  
         Hand One = new Hand(OC);
         Card[] TC = {new Card("2","♠"),new Card("4","♥"),new Card("5","♥"),new Card("6","♠"),
-                new Card("8","♠"),new Card("7","♥"),null}; 
+                new Card("8","♠"),new Card("10","♥"),null}; 
         Hand Two = new Hand(TC);
         for(Card e: One.Hand)
         {

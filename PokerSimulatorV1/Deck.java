@@ -62,7 +62,7 @@ public class Deck
             OneT[i] = OneA.Hand[i] == null;
             TwoT[i] = TwoA.Hand[i] == null;
         }
-        int times = 1000;
+        int times = 10000;
         Card[] RemoveCards = new Card[9];
         if( One.Hand[0] != null && One.Hand[1] != null && Two.Hand[0] != null && Two.Hand[1] != null)
         {
@@ -132,10 +132,10 @@ public class Deck
             reset();
             times--; 
         }
-        double OneWP = (double)(OneW)/10;
-        double TwoWP = (double)(TwoW)/10;
-        double Split = 100 - (double)(OneW+TwoW)/10;
-        String output = "One Wins = " + OneWP + "%  Two Wins = " + TwoWP + "%  Split = " + String.format("%.2f", Split)+ "%" ;
+        double OneWP = (double)(OneW)/100;
+        double TwoWP = (double)(TwoW)/100;
+        double Split = 100 - (double)(OneW+TwoW)/100;
+        String output = "One Wins = " + OneWP + "%  Two Wins = " + TwoWP + "%  Split = " + String.format("%.3f", Split)+ "%" ;
         return output;
     }
 

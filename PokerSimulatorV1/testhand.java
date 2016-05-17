@@ -11,7 +11,6 @@ public class testhand
         for( int i = 0 ; i < x.length; i ++)
         {
             x[i] = new Card(Ranks[(int)(Math.random()*13)],Suits[(int)(Math.random()*4)]);
-            System.out.println(x[i]);
         }
         Hand Handx = new Hand(x);
         for(Card e: Handx.Hand)
@@ -19,9 +18,10 @@ public class testhand
             System.out.print(e + " ");
 
         }
+        int[] HandF = Handx.Scoring();
         for(int i = 0; i < 3; i ++)
         {
-            System.out.print(Handx.score[i]);
+            System.out.print(HandF[i]);
         }
     }
 }

@@ -6,9 +6,11 @@ public class CardSelector extends JPanel implements ActionListener
 {
     //////////////////////////////////////////////////
     static JFrame MainFrame = new JFrame("Select A Card");
-    public String test = "test";
+    public String name;
+    JTextField nameT = new JTextField(4);
     //////////////////////////////////////////////////
     JTextField CardText = new JTextField(4);
+    JPanel Text = new JPanel(new GridLayout(2,1));
     JButton Confirm = new JButton("OK");
     JButton Cancel = new JButton("Reset");
     JRadioButton[] CardSelect = new JRadioButton[52];
@@ -20,8 +22,13 @@ public class CardSelector extends JPanel implements ActionListener
     JPanel OkCancel = new JPanel(new GridLayout(1,2));
     public CardSelector()
     {
-        
+
         super(new BorderLayout());
+        Text.add(nameT);
+        Text.add(CardText);
+
+        nameT.setText(name);
+        nameT.setEnabled(false);
         for (int i = 0; i < 52; i++)
         {
             Cards[i] = new Card(Ranks[i/4],Suits[i%4]);
@@ -33,30 +40,14 @@ public class CardSelector extends JPanel implements ActionListener
                 public void actionPerformed(ActionEvent e)
                 {        
                     MainFrame.setVisible(false);
-<<<<<<< HEAD
-
-                    try
-                    {
-                        FileOutputStream fileOut =
-                            new FileOutputStream("/tmp/card.ser");
-                        ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                        out.writeObject(e);
-                        out.close();
-                        fileOut.close();
-                    }catch(IOException i)
-                    {
-                        i.printStackTrace();
-=======
-                    for( int i = 0; i< 52; i++)
-                    {
-                        if(CardSelect[i].isSelected())
-                        {
-                            SelectedCard = Card.reverseToString(CardSelect[i].getText());
-                        }
->>>>>>> origin/master
+                    try{
+                        SerializationUtil.serialize(SelectedCard, name + ".ser");
                     }
-                }
-            });
+                    catch (IOException a) {
+                        a.printStackTrace();
+                        return;
+                    }
+                }});
         Cancel.addActionListener(new ActionListener(){ 
                 public void actionPerformed(ActionEvent e)
                 {        
@@ -72,7 +63,7 @@ public class CardSelector extends JPanel implements ActionListener
         OkCancel.add(Confirm);
         OkCancel.add(Cancel);
 
-        add(CardText,BorderLayout.PAGE_START);
+        add(Text,BorderLayout.PAGE_START);
         add(RadioButtons,BorderLayout.CENTER);
         add(OkCancel,BorderLayout.PAGE_END);
     }
@@ -89,13 +80,18 @@ public class CardSelector extends JPanel implements ActionListener
             CardText.setText(SelectedCard.toString());
         }
     }
-
-    public static void createAndShowGUI() 
+    public void setName(String nameT)
+    {
+        name = nameT;
+    }
+    public void createAndShowGUI(String e) 
     {
         MainFrame.add(new CardSelector(),BorderLayout.CENTER);
         MainFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         MainFrame.pack();
         MainFrame.setVisible(true);
+        nameT.setText(e);
+        name = nameT.getText();
     }
 
     public void setCard(Card place)
