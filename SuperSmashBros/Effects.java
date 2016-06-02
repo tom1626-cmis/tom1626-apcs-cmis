@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Effects extends Actor
+public abstract class Effects extends Actor
 {
     int timer;
     public Effects(int n)
