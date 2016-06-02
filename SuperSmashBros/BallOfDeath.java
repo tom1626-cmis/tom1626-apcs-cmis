@@ -6,12 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BallOfDeath extends Actor
+public class BallOfDeath extends Projectiles
 {
-    int speed;
+    int timer = 1;
     public BallOfDeath(int x)
     {
-        speed = x;
+        super(x,7,0.5);
     }
 
     public void act() 

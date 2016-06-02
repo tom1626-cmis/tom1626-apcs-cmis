@@ -6,22 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BallExplosion extends Actor
+public class BallExplosion extends DamagingEffects
 {
-    int timer = 15;
-    public void act() 
+    public BallExplosion()
+    {
+        super(15,7,0.5);
+    }
+    public void act()
     {
         remove();
-    }    
-    public void remove()
-    {
-        if ( timer != 0)
-        {
-            timer --;
-        }
-        if (timer == 0)
-        {
-            getWorld().removeObject(this);
-        }
     }
 }

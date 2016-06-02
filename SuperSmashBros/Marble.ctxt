@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=Bomb
+comment0.target=Marble
 comment1.params=
-comment1.target=Bomb()
+comment1.target=Marble()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=

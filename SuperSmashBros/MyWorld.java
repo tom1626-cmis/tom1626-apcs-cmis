@@ -6,6 +6,7 @@ public class MyWorld extends World
     ground[] fgrounds = new ground[11];
     ground[] egrounds = new ground[11];
     ground[] bgrounds = new ground[15];
+    int iNeedaWhileLoopCounter = 0;
     ArrayList<BallOfDeath> BallArray = new ArrayList<BallOfDeath>();
         int timerBall = 1000;
         int counter = 0;
@@ -16,6 +17,11 @@ public class MyWorld extends World
     public MyWorld()
     {    
         super(1100, 550, 1); 
+        //sign
+        setPaintOrder(Player.class);
+        addObject(new BreadSign("Yes, this is bread.\n Stop asking."),150,208);
+        addObject(new BreadSign("Again, this is bread."),900,215);
+        addObject(new BreadSign("Should be obvious what this is."), 550,415);
         //create counter and players
         addObject(test1,300,0);
         addObject(testx,800,0);
@@ -30,23 +36,20 @@ public class MyWorld extends World
         for(int i=0; i< fgrounds.length ; i ++)
         {
             fgrounds[i] = new ground();
-            addObject(fgrounds[i], i*20+100, 200);
+            addObject(fgrounds[i], i*20+100, 250);
             egrounds[i] = new ground();
-            addObject(egrounds[i], i*20+800, 200);
+            addObject(egrounds[i], i*20+800,250);
         }
-        for(int i= 0; i < bgrounds.length; i++)
+        while(iNeedaWhileLoopCounter<bgrounds.length)
         {
-            bgrounds[i] = new ground();
-            addObject(bgrounds[i], i*25+370,400);
+            bgrounds[iNeedaWhileLoopCounter] = new ground();
+            addObject(bgrounds[iNeedaWhileLoopCounter],iNeedaWhileLoopCounter*25+370,450);
+            iNeedaWhileLoopCounter++;
         }
-        act();
     }
     
     public static Counter getCounter(Counter C)
     {
         return C;
-    }
-    public void test()
-    {
     }
 }

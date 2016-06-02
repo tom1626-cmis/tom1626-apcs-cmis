@@ -1,15 +1,18 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-import greenfoot.*;
-public class Bomb extends Projectiles implements TPR
+
+public class Marble extends Projectiles
 {
-    int timer = 2;
-    public Bomb()
+    int timer = 4;
+    public Marble()
     {
-        super(4,4,0.8);
+        super(15,2,0.2);
+
     }
 
     public void act() 
     {
+
         move(speed);
 
         if(isAtEdge())
@@ -28,8 +31,8 @@ public class Bomb extends Projectiles implements TPR
         {
             getWorld().removeObject(this);
         }
-        
-    }    
+
+    }
 
     public void TPR()
     {
@@ -43,6 +46,4 @@ public class Bomb extends Projectiles implements TPR
         }
 
     }
-
-
-    }
+}
