@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Player extends Actor implements gravity
+public abstract class Player extends Actor implements gravity
 {
     double speed = 0;
     boolean jump = true;

@@ -4,11 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 public class CardSelector extends JPanel implements ActionListener
 {
-    //////////////////////////////////////////////////
     static JFrame MainFrame = new JFrame("Select A Card");
-    public String name;
-    JTextField nameT = new JTextField(4);
-    //////////////////////////////////////////////////
     JTextField CardText = new JTextField(4);
     JPanel Text = new JPanel(new GridLayout(2,1));
     JButton Confirm = new JButton("OK");
@@ -24,11 +20,8 @@ public class CardSelector extends JPanel implements ActionListener
     {
 
         super(new BorderLayout());
-        Text.add(nameT);
         Text.add(CardText);
 
-        nameT.setText(name);
-        nameT.setEnabled(false);
         for (int i = 0; i < 52; i++)
         {
             Cards[i] = new Card(Ranks[i/4],Suits[i%4]);
@@ -41,7 +34,7 @@ public class CardSelector extends JPanel implements ActionListener
                 {        
                     MainFrame.setVisible(false);
                     try{
-                        SerializationUtil.serialize(SelectedCard, name + ".ser");
+                        SerializationUtil.serialize(SelectedCard, SelectedCard.toString() + ".ser");
                     }
                     catch (IOException a) {
                         a.printStackTrace();
@@ -80,18 +73,12 @@ public class CardSelector extends JPanel implements ActionListener
             CardText.setText(SelectedCard.toString());
         }
     }
-    public void setName(String nameT)
-    {
-        name = nameT;
-    }
     public void createAndShowGUI(String e) 
     {
         MainFrame.add(new CardSelector(),BorderLayout.CENTER);
         MainFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         MainFrame.pack();
         MainFrame.setVisible(true);
-        nameT.setText(e);
-        name = nameT.getText();
     }
 
     public void setCard(Card place)
